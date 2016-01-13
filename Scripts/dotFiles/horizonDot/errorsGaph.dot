@@ -1,0 +1,19 @@
+digraph godep {
+rankdir="LR"
+0 [label="encoding/json" style="filled" color="palegreen"];
+1 [label="fmt" style="filled" color="palegreen"];
+2 [label="net/http" style="filled" color="palegreen"];
+3 [label="sort" style="filled" color="palegreen"];
+4 [label="strings" style="filled" color="palegreen"];
+5 [label="sync" style="filled" color="palegreen"];
+6 [label="github.com/docker/docker/errors" style="filled" color="paleturquoise"];
+6 -> 7;
+6 -> 2;
+7 [label="github.com/docker/distribution/registry/api/errcode" style="filled" color="paleturquoise"];
+7 -> 0;
+7 -> 1;
+7 -> 2;
+7 -> 3;
+7 -> 4;
+7 -> 5;
+}

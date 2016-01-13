@@ -1,0 +1,23 @@
+% !TEX root = ../report.tex
+
+\section{Process View}
+\label{sec:viewprocess}
+This section discusses the system processes, how they communicate and the runtime behaviour of the system.
+
+\subsection{Plugins}
+\label{sec:processplugins}
+Docker supports extending its capabilities using third-party plugins. At the moment of writing, Docker allows extending the functionality of the volumes and network subsystems, which are responsible for storing files outside containers and inter-container communication over the network respectively. This will be extended in the future\cite{dockerplugindocs}.
+
+A plugin runs in its own separate process and communicates with the Docker daemon using the REST API. In order for the Docker daemon to know about the plugins existence, a file has to be placed in a pre-defined directory. %todo explain exactly (sock file, etc file, json file ...)
+
+In Figure~\ref{fig:activity_plugin} the process of using a plugin can be seen.
+\begin{figure}[H]
+\caption{An activity diagram showing the process of using a plugin (simplified)}
+\centering
+\includegraphics[scale=0.5]{4-softwarearch/images/plugins_activity.png}
+\label{fig:activity_plugin}
+\end{figure}
+
+A user indicates that he/she wants to use a plugin by passing a command-line parameter to the Docker client when starting a container. If this parameter is present, then the daemon will start looking for the plugin in the plugin directory. If the plugin is not found, it returns an error to the user. 
+When the plugin is found, the daemon will send a handshake to the plugin using a UNIX socket and the plugin will reply with a list of subsystems it implements. 
+The Docker daemon will then use the \pattern{Proxy} pattern to forward calls to this subsystem to the plugin process.

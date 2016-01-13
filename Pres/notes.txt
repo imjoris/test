@@ -1,0 +1,2 @@
+Add sheet with all patterns
+remove "client/daemon", its the same as client server

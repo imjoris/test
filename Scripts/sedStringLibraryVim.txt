@@ -1,0 +1,8 @@
+%s/\"\n/\"\,\r/g
+
+# correct indentation
+# (you could just do 'gg=G' though... forgot about that)
+%s/^\s*\(\w\)/  \1/g
+
+
+images/Dockerrep.png

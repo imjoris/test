@@ -1,0 +1,14 @@
+digraph godep {
+rankdir="LR"
+0 [label="github.com/docker/docker/volume" style="filled" color="paleturquoise"];
+0 -> 1;
+0 -> 2;
+0 -> 3;
+1 [label="github.com/Sirupsen/logrus" style="filled" color="paleturquoise"];
+2 [label="github.com/docker/docker/errors" style="filled" color="paleturquoise"];
+2 -> 4;
+4 [label="github.com/docker/distribution/registry/api/errcode" style="filled" color="paleturquoise"];
+3 [label="github.com/docker/docker/pkg/system" style="filled" color="paleturquoise"];
+3 -> 5;
+5 [label="github.com/docker/go-units" style="filled" color="paleturquoise"];
+}

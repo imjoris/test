@@ -1,0 +1,6 @@
+digraph godep {
+rankdir="LR"
+0 [label="github.com/docker/docker/errors" style="filled" color="paleturquoise"];
+0 -> 1;
+1 [label="github.com/docker/distribution/registry/api/errcode" style="filled" color="paleturquoise"];
+}

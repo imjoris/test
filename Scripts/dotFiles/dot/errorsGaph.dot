@@ -1,0 +1,18 @@
+digraph godep {
+0 [label="strings" style="filled" color="palegreen"];
+1 [label="sync" style="filled" color="palegreen"];
+2 [label="github.com/docker/docker/errors" style="filled" color="paleturquoise"];
+2 -> 3;
+2 -> 4;
+3 [label="github.com/docker/distribution/registry/api/errcode" style="filled" color="paleturquoise"];
+3 -> 5;
+3 -> 6;
+3 -> 4;
+3 -> 7;
+3 -> 0;
+3 -> 1;
+5 [label="encoding/json" style="filled" color="palegreen"];
+6 [label="fmt" style="filled" color="palegreen"];
+4 [label="net/http" style="filled" color="palegreen"];
+7 [label="sort" style="filled" color="palegreen"];
+}

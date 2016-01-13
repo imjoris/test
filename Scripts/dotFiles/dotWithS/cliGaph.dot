@@ -1,0 +1,13 @@
+digraph godep {
+0 [label="github.com/docker/docker/cli" style="filled" color="paleturquoise"];
+0 -> 1;
+0 -> 2;
+1 [label="github.com/docker/docker/pkg/mflag" style="filled" color="paleturquoise"];
+1 -> 3;
+3 [label="github.com/docker/docker/pkg/homedir" style="filled" color="paleturquoise"];
+3 -> 4;
+4 [label="github.com/opencontainers/runc/libcontainer/user" style="filled" color="paleturquoise"];
+2 [label="github.com/docker/docker/pkg/tlsconfig" style="filled" color="paleturquoise"];
+2 -> 5;
+5 [label="github.com/Sirupsen/logrus" style="filled" color="paleturquoise"];
+}

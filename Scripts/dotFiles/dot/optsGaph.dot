@@ -1,0 +1,37 @@
+digraph godep {
+0 [label="net/url" style="filled" color="palegreen"];
+1 [label="strconv" style="filled" color="palegreen"];
+2 [label="strings" style="filled" color="palegreen"];
+3 [label="github.com/docker/docker/opts" style="filled" color="paleturquoise"];
+3 -> 4;
+3 -> 5;
+3 -> 6;
+3 -> 7;
+3 -> 8;
+3 -> 9;
+3 -> 0;
+3 -> 10;
+3 -> 11;
+3 -> 12;
+3 -> 1;
+3 -> 2;
+7 [label="github.com/docker/docker/pkg/ulimit" style="filled" color="paleturquoise"];
+7 -> 5;
+7 -> 1;
+7 -> 2;
+6 [label="github.com/docker/docker/pkg/blkiodev" style="filled" color="paleturquoise"];
+6 -> 5;
+8 [label="github.com/docker/go-units" style="filled" color="paleturquoise"];
+8 -> 5;
+8 -> 11;
+8 -> 1;
+8 -> 2;
+8 -> 13;
+11 [label="regexp" style="filled" color="palegreen"];
+13 [label="time" style="filled" color="palegreen"];
+12 [label="runtime" style="filled" color="palegreen"];
+4 [label="bufio" style="filled" color="palegreen"];
+5 [label="fmt" style="filled" color="palegreen"];
+9 [label="net" style="filled" color="palegreen"];
+10 [label="os" style="filled" color="palegreen"];
+}

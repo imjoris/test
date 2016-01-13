@@ -1,0 +1,36 @@
+digraph godep {
+rankdir="LR"
+0 [label="github.com/Sirupsen/logrus" style="filled" color="paleturquoise"];
+1 [label="golang.org/x/net/context" style="filled" color="paleturquoise"];
+2 [label="github.com/docker/docker/pkg/promise" style="filled" color="paleturquoise"];
+3 [label="github.com/docker/docker/dockerversion" style="filled" color="paleturquoise"];
+4 [label="github.com/docker/go-units" style="filled" color="paleturquoise"];
+5 [label="github.com/docker/docker/pkg/ioutils" style="filled" color="paleturquoise"];
+5 -> 1;
+6 [label="github.com/docker/docker/pkg/stringid" style="filled" color="paleturquoise"];
+6 -> 7;
+8 [label="github.com/docker/distribution/registry/api/errcode" style="filled" color="paleturquoise"];
+9 [label="github.com/docker/docker/pkg/fileutils" style="filled" color="paleturquoise"];
+9 -> 0;
+10 [label="github.com/docker/docker/pkg/idtools" style="filled" color="paleturquoise"];
+10 -> 11;
+12 [label="github.com/docker/docker/pkg/pools" style="filled" color="paleturquoise"];
+12 -> 5;
+13 [label="github.com/docker/docker/pkg/archive" style="filled" color="paleturquoise"];
+13 -> 0;
+13 -> 9;
+13 -> 10;
+13 -> 5;
+13 -> 12;
+13 -> 2;
+13 -> 11;
+11 [label="github.com/docker/docker/pkg/system" style="filled" color="paleturquoise"];
+11 -> 4;
+7 [label="github.com/docker/docker/pkg/random" style="filled" color="paleturquoise"];
+14 [label="github.com/docker/docker/utils" style="filled" color="paleturquoise"];
+14 -> 8;
+14 -> 3;
+14 -> 13;
+14 -> 9;
+14 -> 6;
+}

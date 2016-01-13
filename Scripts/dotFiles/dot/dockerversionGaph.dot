@@ -1,0 +1,3 @@
+digraph godep {
+0 [label="github.com/docker/docker/dockerversion" style="filled" color="paleturquoise"];
+}
